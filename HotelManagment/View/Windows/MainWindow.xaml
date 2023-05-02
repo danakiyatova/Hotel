@@ -1,0 +1,34 @@
+﻿<Window x:Class="HotelManagment.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HotelManagment"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="CanResize"
+        Title="Главное окно" 
+        MinHeight="400" MinWidth="400"
+        Width="700" Height="500">
+    <Grid Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Button Grid.Row="1" Height="40" Width="250" HorizontalAlignment="Right" Margin="25" x:Name="btnRooms" FontWeight="SemiBold" FontSize="15"
+                Content="НОМЕРА" Click="btnRooms_Click"/>
+
+        <Button Grid.Row="2" Height="40" Width="250" HorizontalAlignment="Right" Margin="25" x:Name="btnCategory" FontWeight="SemiBold" FontSize="15" 
+                Content="КАТЕГОРИИ НОМЕРОВ" Click="btnCategory_Click"/>
+
+        <Button Grid.Row="3" Height="40" Width="250" HorizontalAlignment="Right" Margin="25" x:Name="btnGuests" FontWeight="SemiBold" FontSize="15" 
+                Content="ГОСТИ" Click="btnGuests_Click"/>
+
+        <Button Grid.Row="4" Height="40" Width="250" HorizontalAlignment="Right" Margin="25" x:Name="btnBooking" FontWeight="SemiBold" FontSize="15" 
+                Content="БРОНИРОВАНИЯ" Click="btnBooking_Click"/>
+        
+    </Grid>
+</Window>

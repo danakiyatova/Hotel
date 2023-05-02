@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище HotelDBModelContainer" CdmEntityContainer="HotelDBEntities">
+    <EntitySetMapping Name="Booking">
+      <EntityTypeMapping TypeName="HotelDBModel.Booking">
+        <MappingFragment StoreEntitySet="Booking">
+          <ScalarProperty Name="BookingID" ColumnName="BookingID" />
+          <ScalarProperty Name="GuestID" ColumnName="GuestID" />
+          <ScalarProperty Name="BookDate" ColumnName="BookDate" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="Id_room" ColumnName="Id_room" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="HotelAdminID" ColumnName="HotelAdminID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Gender">
+      <EntityTypeMapping TypeName="HotelDBModel.Gender">
+        <MappingFragment StoreEntitySet="Gender">
+          <ScalarProperty Name="GenderID" ColumnName="GenderID" />
+          <ScalarProperty Name="GenderName" ColumnName="GenderName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Guest">
+      <EntityTypeMapping TypeName="HotelDBModel.Guest">
+        <MappingFragment StoreEntitySet="Guest">
+          <ScalarProperty Name="GuestID" ColumnName="GuestID" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Patronymic" ColumnName="Patronymic" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="PassportSeries" ColumnName="PassportSeries" />
+          <ScalarProperty Name="PassportNumber" ColumnName="PassportNumber" />
+          <ScalarProperty Name="GenderID" ColumnName="GenderID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HotelAdmin">
+      <EntityTypeMapping TypeName="HotelDBModel.HotelAdmin">
+        <MappingFragment StoreEntitySet="HotelAdmin">
+          <ScalarProperty Name="HotelAdminID" ColumnName="HotelAdminID" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Patronymic" ColumnName="Patronymic" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Room">
+      <EntityTypeMapping TypeName="HotelDBModel.Room">
+        <MappingFragment StoreEntitySet="Room">
+          <ScalarProperty Name="RoomID" ColumnName="RoomID" />
+          <ScalarProperty Name="RoomName" ColumnName="RoomName" />
+          <ScalarProperty Name="RoomNumber" ColumnName="RoomNumber" />
+          <ScalarProperty Name="Seats" ColumnName="Seats" />
+          <ScalarProperty Name="Cost" ColumnName="Cost" />
+          <ScalarProperty Name="RoomStatusID" ColumnName="RoomStatusID" />
+          <ScalarProperty Name="RoomCategoryID" ColumnName="RoomCategoryID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RoomCategory">
+      <EntityTypeMapping TypeName="HotelDBModel.RoomCategory">
+        <MappingFragment StoreEntitySet="RoomCategory">
+          <ScalarProperty Name="RoomCategoryID" ColumnName="RoomCategoryID" />
+          <ScalarProperty Name="NameOfCategory" ColumnName="NameOfCategory" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RoomStatus">
+      <EntityTypeMapping TypeName="HotelDBModel.RoomStatus">
+        <MappingFragment StoreEntitySet="RoomStatus">
+          <ScalarProperty Name="RoomStatusID" ColumnName="RoomStatusID" />
+          <ScalarProperty Name="StatusName" ColumnName="StatusName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
