@@ -4,8 +4,10 @@ FC:\dk\HotelManagment\HotelManagment\View\Windows\AuthorizationWindow.xaml;;
 FC:\dk\HotelManagment\HotelManagment\View\Windows\BookingWindow.xaml;;
 FC:\dk\HotelManagment\HotelManagment\View\Windows\CategoryWindow.xaml;;
 FC:\dk\HotelManagment\HotelManagment\View\Windows\GuestsWindow.xaml;;
+FC:\dk\HotelManagment\HotelManagment\View\Windows\InsertRoomCateforyWindow.xaml;;
 FC:\dk\HotelManagment\HotelManagment\View\Windows\InsertRoomsWindow.xaml;;
 FC:\dk\HotelManagment\HotelManagment\View\Windows\MainWindow.xaml;;
 FC:\dk\HotelManagment\HotelManagment\View\Windows\RoomsWindow.xaml;;
+FC:\dk\HotelManagment\HotelManagment\View\Windows\UpdateRoomCategoryWindow.xaml;;
 FC:\dk\HotelManagment\HotelManagment\View\Windows\UpdateRoomsWindow.xaml;;
 

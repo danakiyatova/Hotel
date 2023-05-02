@@ -33,6 +33,7 @@ namespace HotelManagment.View.Windows
             Room updateMember = (from m in _db.Room
                                    where m.RoomID == Id
                                    select m).Single();
+            
             updateMember.RoomName = InsertRoomName.Text;
             updateMember.RoomNumber = Convert.ToInt32(InsertRoomNumber.Text);
                 updateMember.Seats = Convert.ToInt32(InsertSeats.Text);

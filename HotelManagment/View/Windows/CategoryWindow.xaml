@@ -5,8 +5,49 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HotelManagment.View.Windows"
         mc:Ignorable="d"
-        Title="CategoryWindow" Height="450" Width="800">
+        WindowStartupLocation="CenterScreen"
+        Title="Категории номеров" MinHeight="500" MinWidth="800"
+        Width="900" Height="500">
+
+
     <Grid>
-        
+
+        <DataGrid x:Name="myDataGrid" x:FieldModifier="public"
+            ItemsSource="{Binding RoomCategory}"
+            IsReadOnly = "true"
+            SelectionChanged="DataGrid_SelectionChanged"
+            AutoGenerateColumns="False" Visibility="Visible" 
+                  HorizontalAlignment="Left" Height="315" Margin="50,40,0,0" VerticalAlignment="Top" Width="780">
+
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding RoomCategoryID}"/>
+                <DataGridTextColumn Header="Название категории"  Binding="{Binding NameOfCategory}"/>
+
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.HeaderTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="Действие" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.HeaderTemplate>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <Button x:Name="insertBtn2" Content="Вставить" Click="insertBtn2_Click"  />
+                                <Button x:Name="updateBtn2" Content="Изменить" Click="updateBtn2_Click"  />
+                                <Button x:Name="deleteBtn2" Content="Удалить" Click="deleteBtn2_Click_1"  />
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+            </DataGrid.Columns>
+
+
+        </DataGrid>
+
+        <Button x:Name="BtnBack2" Content="Назад" HorizontalAlignment="Left" Margin="644,364,0,0" 
+                VerticalAlignment="Top" Width="121" Click="BtnBack2_Click" />
+
     </Grid>
 </Window>

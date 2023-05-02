@@ -30,6 +30,7 @@ namespace HotelManagment.View.Windows
         {
             Room newRoom = new Room()
             {
+                
                 RoomName = InsertRoomName.Text,
                 RoomNumber = Convert.ToInt32(InsertRoomNumber.Text),
                 Seats = Convert.ToInt32(InsertRoomNumber.Text),

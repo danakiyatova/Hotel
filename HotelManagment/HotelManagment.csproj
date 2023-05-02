@@ -112,11 +112,17 @@
     <Compile Include="View\Windows\GuestsWindow.xaml.cs">
       <DependentUpon>GuestsWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Windows\InsertRoomCateforyWindow.xaml.cs">
+      <DependentUpon>InsertRoomCateforyWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Windows\InsertRoomsWindow.xaml.cs">
       <DependentUpon>InsertRoomsWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Windows\RoomsWindow.xaml.cs">
       <DependentUpon>RoomsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Windows\UpdateRoomCategoryWindow.xaml.cs">
+      <DependentUpon>UpdateRoomCategoryWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Windows\UpdateRoomsWindow.xaml.cs">
       <DependentUpon>UpdateRoomsWindow.xaml</DependentUpon>
@@ -134,6 +140,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Windows\GuestsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Windows\InsertRoomCateforyWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -157,6 +167,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="View\Windows\RoomsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Windows\UpdateRoomCategoryWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
