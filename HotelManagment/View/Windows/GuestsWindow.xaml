@@ -5,8 +5,55 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HotelManagment.View.Windows"
         mc:Ignorable="d"
-        Title="GuestsWindow" Height="450" Width="800">
+        ResizeMode="CanMinimize"
+       WindowStartupLocation="CenterScreen"
+        Title="Гости" MinHeight="500" MinWidth="800"
+        Width="900" Height="500">
+
+
     <Grid>
-        
+
+        <DataGrid x:Name="myDataGrid" x:FieldModifier="public"
+            ItemsSource="{Binding Guest}"
+            IsReadOnly = "true"
+            SelectionChanged="DataGrid_SelectionChanged"
+            AutoGenerateColumns="False" Visibility="Visible" 
+                  HorizontalAlignment="Left" Height="315" Margin="50,40,0,0" VerticalAlignment="Top" Width="780">
+
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding GuestID}"/>
+                <DataGridTextColumn Header="Фамилия" Binding="{Binding Surname}"/>
+                <DataGridTextColumn Header="Имя"  Binding="{Binding Name}"/>
+                <DataGridTextColumn Header="Отчество" Binding="{Binding Patronymic}"/>
+                <DataGridTextColumn Header="Номер телефона" Binding="{Binding PhoneNumber}"/>
+                <DataGridTextColumn Header="Серия паспорта" Binding="{Binding PassportSeries}"/>
+                <DataGridTextColumn Header="Номер паспорта" Binding="{Binding PassportNumber}"/>
+                <DataGridTextColumn Header="Гендер(id)" Binding="{Binding GenderID}"/>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.HeaderTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="Действие" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.HeaderTemplate>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <Button x:Name="insertBtn3" Content="Вставить" Click="insertBtn3_Click" />
+                                <Button x:Name="updateBtn3" Content="Изменить" Click="updateBtn3_Click"/>
+                                <Button x:Name="deleteBtn3" Content="Удалить" Click="deleteBtn3_Click"  />
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+            </DataGrid.Columns>
+
+
+        </DataGrid>
+
+        <Button x:Name="BtnBack3" Content="Назад" HorizontalAlignment="Left" Margin="644,364,0,0" 
+                VerticalAlignment="Top" Width="121" Click="BtnBack3_Click" />
+
     </Grid>
 </Window>

@@ -112,6 +112,12 @@
     <Compile Include="View\Windows\GuestsWindow.xaml.cs">
       <DependentUpon>GuestsWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Windows\InsertBookingWindow.xaml.cs">
+      <DependentUpon>InsertBookingWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Windows\InsertGuestWindow.xaml.cs">
+      <DependentUpon>InsertGuestWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Windows\InsertRoomCateforyWindow.xaml.cs">
       <DependentUpon>InsertRoomCateforyWindow.xaml</DependentUpon>
     </Compile>
@@ -120,6 +126,12 @@
     </Compile>
     <Compile Include="View\Windows\RoomsWindow.xaml.cs">
       <DependentUpon>RoomsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Windows\UpdateBookingWindow.xaml.cs">
+      <DependentUpon>UpdateBookingWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Windows\UpdateGuestWindow.xaml.cs">
+      <DependentUpon>UpdateGuestWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Windows\UpdateRoomCategoryWindow.xaml.cs">
       <DependentUpon>UpdateRoomCategoryWindow.xaml</DependentUpon>
@@ -140,6 +152,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Windows\GuestsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Windows\InsertBookingWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Windows\InsertGuestWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -167,6 +187,14 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="View\Windows\RoomsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Windows\UpdateBookingWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Windows\UpdateGuestWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

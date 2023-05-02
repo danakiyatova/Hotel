@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HotelManagment.View.Windows" xmlns:viewmodel="clr-namespace:HotelManagment.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodel:Appvm}"
         mc:Ignorable="d"
+          ResizeMode="CanMinimize"
         WindowStartupLocation="CenterScreen"
         Title="Номера" MinHeight="500" MinWidth="800"
         Width="900" Height="500">

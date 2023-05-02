@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\dk\HotelManagment\HotelManagment\App.xaml
-101674352043
+14196338195
 2284986625
-271351293506
+31475550634
 18-628699571
-View\Windows\AuthorizationWindow.xaml;View\Windows\BookingWindow.xaml;View\Windows\CategoryWindow.xaml;View\Windows\GuestsWindow.xaml;View\Windows\InsertRoomCateforyWindow.xaml;View\Windows\InsertRoomsWindow.xaml;View\Windows\MainWindow.xaml;View\Windows\RoomsWindow.xaml;View\Windows\UpdateRoomCategoryWindow.xaml;View\Windows\UpdateRoomsWindow.xaml;
+View\Windows\AuthorizationWindow.xaml;View\Windows\BookingWindow.xaml;View\Windows\CategoryWindow.xaml;View\Windows\GuestsWindow.xaml;View\Windows\InsertBookingWindow.xaml;View\Windows\InsertGuestWindow.xaml;View\Windows\InsertRoomCateforyWindow.xaml;View\Windows\InsertRoomsWindow.xaml;View\Windows\MainWindow.xaml;View\Windows\RoomsWindow.xaml;View\Windows\UpdateBookingWindow.xaml;View\Windows\UpdateGuestWindow.xaml;View\Windows\UpdateRoomCategoryWindow.xaml;View\Windows\UpdateRoomsWindow.xaml;
 
 False
 

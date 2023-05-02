@@ -37,7 +37,7 @@ namespace HotelManagment.View.Windows
             updateCategory.NameOfCategory = UpdateRoomCategory.Text;
             
             _db.SaveChanges();
-            CategoryWindow.datagrid.ItemsSource = _db.Room.ToList();
+            CategoryWindow.datagrid.ItemsSource = _db.RoomCategory.ToList();
             this.Hide();
         }
     }

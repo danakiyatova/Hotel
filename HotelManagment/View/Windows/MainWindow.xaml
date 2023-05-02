@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:HotelManagment"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        ResizeMode="CanResize"
+          ResizeMode="CanMinimize"
         Title="Главное окно" 
         MinHeight="400" MinWidth="400"
         Width="700" Height="500">

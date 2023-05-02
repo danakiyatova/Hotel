@@ -39,3 +39,11 @@ C:\dk\HotelManagment\HotelManagment\obj\Debug\View\Windows\UpdateRoomCategoryWin
 C:\dk\HotelManagment\HotelManagment\obj\Debug\View\Windows\InsertRoomCateforyWindow.baml
 C:\dk\HotelManagment\HotelManagment\obj\Debug\View\Windows\UpdateRoomCategoryWindow.baml
 C:\dk\HotelManagment\HotelManagment\obj\Debug\HotelManagment.csproj.AssemblyReference.cache
+C:\dk\HotelManagment\HotelManagment\obj\Debug\View\Windows\InsertGuestWindow.g.cs
+C:\dk\HotelManagment\HotelManagment\obj\Debug\View\Windows\UpdateGuestWindow.g.cs
+C:\dk\HotelManagment\HotelManagment\obj\Debug\View\Windows\InsertGuestWindow.baml
+C:\dk\HotelManagment\HotelManagment\obj\Debug\View\Windows\UpdateGuestWindow.baml
+C:\dk\HotelManagment\HotelManagment\obj\Debug\View\Windows\InsertBookingWindow.g.cs
+C:\dk\HotelManagment\HotelManagment\obj\Debug\View\Windows\UpdateBookingWindow.g.cs
+C:\dk\HotelManagment\HotelManagment\obj\Debug\View\Windows\InsertBookingWindow.baml
+C:\dk\HotelManagment\HotelManagment\obj\Debug\View\Windows\UpdateBookingWindow.baml
