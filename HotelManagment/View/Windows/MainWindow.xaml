@@ -9,8 +9,17 @@
           ResizeMode="CanMinimize"
         Title="Главное окно" 
         MinHeight="400" MinWidth="400"
-        Width="700" Height="500">
-    <Grid Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center">
+        Width="700" Height="500" Foreground="#FF05006D">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="Black"/>
+            <GradientStop Color="#FFB35FDD" Offset="1"/>
+            <GradientStop Color="#FF343434"/>
+            <GradientStop Color="#FF9DE99C"/>
+            <GradientStop Color="#FF85C6D9" Offset="0.244"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center" >
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
@@ -18,17 +27,17 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <Button Grid.Row="1" Height="40" Width="250" HorizontalAlignment="Right" Margin="25" x:Name="btnRooms" FontWeight="SemiBold" FontSize="15"
-                Content="НОМЕРА" Click="btnRooms_Click"/>
+        <Button Grid.Row="1" Height="50" Width="280" HorizontalAlignment="Right" Margin="25" x:Name="btnRooms" 
+                Content="НОМЕРА" Click="btnRooms_Click" Foreground="#FF05006D" Background="Bisque" FontFamily="Tahoma" FontSize="20"/>
 
-        <Button Grid.Row="2" Height="40" Width="250" HorizontalAlignment="Right" Margin="25" x:Name="btnCategory" FontWeight="SemiBold" FontSize="15" 
-                Content="КАТЕГОРИИ НОМЕРОВ" Click="btnCategory_Click"/>
+        <Button Grid.Row="2" Height="50" Width="280" HorizontalAlignment="Right" Margin="25" x:Name="btnCategory"  
+                Content="КАТЕГОРИИ НОМЕРОВ" Click="btnCategory_Click" Foreground="#FF05006D" Background="Bisque" FontFamily="Tahoma" FontSize="20"/>
 
-        <Button Grid.Row="3" Height="40" Width="250" HorizontalAlignment="Right" Margin="25" x:Name="btnGuests" FontWeight="SemiBold" FontSize="15" 
-                Content="ГОСТИ" Click="btnGuests_Click"/>
+        <Button Grid.Row="3" Height="50" Width="280" HorizontalAlignment="Right" Margin="25" x:Name="btnGuests" 
+                Content="ГОСТИ" Click="btnGuests_Click" Foreground="#FF05006D" Background="Bisque" FontFamily="Tahoma" FontSize="20"/>
 
-        <Button Grid.Row="4" Height="40" Width="250" HorizontalAlignment="Right" Margin="25" x:Name="btnBooking" FontWeight="SemiBold" FontSize="15" 
-                Content="БРОНИРОВАНИЯ" Click="btnBooking_Click"/>
-        
+        <Button Grid.Row="4" Height="50" Width="280" HorizontalAlignment="Right" Margin="25" x:Name="btnBooking"
+                Content="БРОНИРОВАНИЕ" Click="btnBooking_Click" Foreground="#FF05006D" Background="Bisque" FontFamily="Tahoma" FontSize="20"/>
+
     </Grid>
 </Window>

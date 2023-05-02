@@ -69,5 +69,11 @@ namespace HotelManagment.View.Windows
             _db.SaveChanges();
             myDataGrid.ItemsSource = _db.Room.ToList();
         }
+        protected override void OnClosed(EventArgs e)
+        {
+            base.OnClosed(e);
+
+            Application.Current.Shutdown();
+        }
     }
 }

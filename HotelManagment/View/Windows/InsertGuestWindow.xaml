@@ -9,7 +9,7 @@
         Title="Добавление данных" Height="550" Width="400"  ResizeMode="NoResize">
     <Grid>
         <StackPanel>
-            <Label  Content="Новый гость" HorizontalAlignment="Center" FontSize="40" FontFamily="Comic Sans MS"/>
+            <Label  Content="Изменить данные о госте" HorizontalAlignment="Center" FontSize="30" FontFamily="Comic Sans MS"/>
             <TextBlock Margin="10,0,0,0" Text="Фамилия" FontSize="15" FontFamily="Comic Sans MS"/>
             <TextBox Name="InsertSurname" Height="30" FontFamily="Comic Sans MS"/>
             <TextBlock Margin="10,0,0,0" Text="Имя" FontSize="15" FontFamily="Comic Sans MS"/>

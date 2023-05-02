@@ -21,6 +21,8 @@ namespace HotelManagment.View.Windows
     public partial class InsertBookingWindow : Window
     {
         HotelDBEntities _db = new HotelDBEntities();
+        private Booking newBooking;
+
         public InsertBookingWindow()
         {
             InitializeComponent();
@@ -28,28 +30,32 @@ namespace HotelManagment.View.Windows
 
         private void StackPanel_ContextMenuClosing(object sender, ContextMenuEventArgs e)
         {
-            
-        }
 
+        }
+          
         private void BtnAddBooking_Click(object sender, RoutedEventArgs e)
         {
-            Booking newBooking = new Booking()
-            {
+           
+                Booking newBooking = new Booking()
+                {
 
 
-                GuestID = Convert.ToInt32(InsertGuestID.Text),
-                               BookDate = Convert.ToDateTime(InsertBookingDate.Text),
-                Duration = Convert.ToInt32(InsertDuration.Text),
-                Id_room = Convert.ToInt32(InsertId_room.Text),
-                Amount = Convert.ToInt64(InsertAmount.Text),
-                HotelAdminID = Convert.ToInt32(InsertHotelAdminID.Text)
+                    GuestID = Convert.ToInt32(InsertGuestID.Text),
+                    BookDate = Convert.ToDateTime(InsertBookingDate.Text),
+                    Duration = Convert.ToInt32(InsertDuration.Text),
+                    Id_room = Convert.ToInt32(InsertId_room.Text),
+                    Amount = Convert.ToInt64(InsertAmount.Text),
+                    HotelAdminID = Convert.ToInt32(InsertHotelAdminID.Text)
 
-            };
-
-            _db.Booking.Add(newBooking);
-            _db.SaveChanges();
-            BookingWindow.datagrid.ItemsSource = _db.Booking.ToList();
-            this.Hide();
+                };
+            
+            
+            
+                _db.Booking.Add(newBooking);
+                _db.SaveChanges();
+                BookingWindow.datagrid.ItemsSource = _db.Booking.ToList();
+                this.Hide();
+           
         }
     }
 }

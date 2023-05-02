@@ -11,14 +11,14 @@
         Width="900" Height="500">
 
 
-    <Grid>
+    <Grid  Background="#FFE7AEFF">
 
         <DataGrid x:Name="myDataGrid" x:FieldModifier="public"
             ItemsSource="{Binding RoomCategory}"
             IsReadOnly = "true"
             SelectionChanged="DataGrid_SelectionChanged"
             AutoGenerateColumns="False" Visibility="Visible" 
-                  HorizontalAlignment="Left" Height="315" Margin="50,40,0,0" VerticalAlignment="Top" Width="780">
+                  HorizontalAlignment="Left" Height="315" Margin="50,40,0,0" VerticalAlignment="Top" Width="780" Foreground="#FF05006D" Background="White">
 
 
             <DataGrid.Columns>
@@ -48,7 +48,7 @@
         </DataGrid>
 
         <Button x:Name="BtnBack2" Content="Назад" HorizontalAlignment="Left" Margin="644,364,0,0" 
-                VerticalAlignment="Top" Width="121" Click="BtnBack2_Click" />
+                VerticalAlignment="Top" Width="121" Click="BtnBack2_Click" Foreground="#FF05006D" Background="Bisque" FontFamily="Tahoma" FontSize="20"/>
 
     </Grid>
 </Window>
