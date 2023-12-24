@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:HotelManagment.View.Windows"
         mc:Ignorable="d"
          WindowStartupLocation="CenterScreen"
-         Title="Изменение данных" Height="500" Width="400"  ResizeMode="NoResize">
+         Title="Изменение данных о категории" Height="500" Width="400"  ResizeMode="NoResize">
     <Grid>
         <StackPanel>
             <Label Content="Изменить категорию" HorizontalAlignment="Center" FontSize="38" FontFamily="Comic Sans MS"/>

@@ -22,16 +22,23 @@ namespace HotelManagment.View.Windows
     public partial class BookingWindow : Window
     {
         HotelDBEntities _db = new HotelDBEntities();
+        List<ModifyBookingList> modifyBookingLists = new List<ModifyBookingList>();
         public static DataGrid datagrid;
         public BookingWindow()
         {
             InitializeComponent();
             this.DataContext = new Appvm();
+
+            foreach (var item in _db.Booking.ToList())
+            {
+                modifyBookingLists.Add(item);
+            }
+
             Load();
         }
         private void Load()
         {
-            myDataGrid.ItemsSource = _db.Booking.ToList();
+            myDataGrid.ItemsSource = modifyBookingLists;
             datagrid = myDataGrid;
         }
 
@@ -56,18 +63,34 @@ namespace HotelManagment.View.Windows
 
         private void updateBtn4_Click(object sender, RoutedEventArgs e)
         {
-            int Id = (myDataGrid.SelectedItem as Booking).BookingID;
+            int Id = (myDataGrid.SelectedItem as ModifyBookingList).BookingID;
             UpdateBookingWindow uBooking = new UpdateBookingWindow(Id);
             uBooking.ShowDialog();
         }
 
         private void deleteBtn4_Click(object sender, RoutedEventArgs e)
         {
-            int Id = (myDataGrid.SelectedItem as Booking).BookingID;
-            var deleteBooking = _db.Booking.Where(m => m.BookingID == Id).Single();
-            _db.Booking.Remove(deleteBooking);
-            _db.SaveChanges();
-            myDataGrid.ItemsSource = _db.Booking.ToList();
+            var removeRoom = myDataGrid.SelectedItem as ModifyBookingList;
+            if (MessageBox.Show($"Вы точно хотите удалить этот элемент?", "Внимаение!",
+                MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            {
+                try
+                {
+                    int Id = (myDataGrid.SelectedItem as ModifyBookingList).BookingID;
+                    var deleteBooking = _db.Booking.Where(m => m.BookingID == Id).Single();
+                     _db.Booking.Remove(deleteBooking);
+                     _db.SaveChanges();
+                    myDataGrid.ItemsSource = _db.Booking.ToList();
+                    MessageBox.Show("Данные удалены.");
+
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show(ex.Message.ToString());
+                }
+
+            }
         }
         protected override void OnClosed(EventArgs e)
         {

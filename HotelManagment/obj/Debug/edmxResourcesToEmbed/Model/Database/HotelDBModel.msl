@@ -77,5 +77,11 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GetGenderName" FunctionName="Хранилище HotelDBModel.GetGenderName" />
+    <FunctionImportMapping FunctionImportName="GetAdminSurname" FunctionName="Хранилище HotelDBModel.GetAdminSurname" />
+    <FunctionImportMapping FunctionImportName="GetGuestSurname" FunctionName="Хранилище HotelDBModel.GetGuestSurname" />
+    <FunctionImportMapping FunctionImportName="GetRoomName" FunctionName="Хранилище HotelDBModel.GetRoomName" />
+    <FunctionImportMapping FunctionImportName="GetCategoryName" FunctionName="Хранилище HotelDBModel.GetCategoryName" />
+    <FunctionImportMapping FunctionImportName="GetStatusName" FunctionName="Хранилище HotelDBModel.GetStatusName" />
   </EntityContainerMapping>
 </Mapping>

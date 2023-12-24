@@ -2,6 +2,7 @@
 using HotelManagment.ViewModel;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,18 +23,26 @@ namespace HotelManagment.View.Windows
     public partial class GuestsWindow : Window
     {
         HotelDBEntities _db = new HotelDBEntities();
+        List<ModifyGuestsList> modifyGuestsLists = new List<ModifyGuestsList>();
         public static DataGrid datagrid;
         public GuestsWindow()
         {
             InitializeComponent();
             this.DataContext = new Appvm();
+
+            foreach (var item in _db.Guest)
+            {
+                modifyGuestsLists.Add(item);
+            }
             Load();
         }
 
         private void Load()
         {
-            myDataGrid.ItemsSource = _db.Guest.ToList();
+            myDataGrid.ItemsSource = null;
+            myDataGrid.ItemsSource = modifyGuestsLists.ToList();
             datagrid = myDataGrid;
+            
         }
 
         private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -56,18 +65,34 @@ namespace HotelManagment.View.Windows
 
         private void updateBtn3_Click(object sender, RoutedEventArgs e)
         {
-            int Id = (myDataGrid.SelectedItem as Guest).GuestID;
+            int Id = (myDataGrid.SelectedItem as ModifyGuestsList).GuestID;
             UpdateGuestWindow uGuest = new UpdateGuestWindow(Id);
             uGuest.ShowDialog();
         }
 
         private void deleteBtn3_Click(object sender, RoutedEventArgs e)
         {
-            int Id = (myDataGrid.SelectedItem as Guest).GuestID;
-            var deleteGuest = _db.Guest.Where(m => m.GuestID == Id).Single();
-            _db.Guest.Remove(deleteGuest);
-            _db.SaveChanges();
-            myDataGrid.ItemsSource = _db.Guest.ToList();
+            var removeRoom = myDataGrid.SelectedItem as ModifyGuestsList;
+            if (MessageBox.Show($"Вы точно хотите удалить этот элемент?", "Внимаение!",
+                MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            {
+                try
+                {
+                    int Id = (myDataGrid.SelectedItem as ModifyGuestsList).GuestID;
+                    var deleteGuest = _db.Guest.Where(m => m.GuestID == Id).Single();
+                    _db.Guest.Remove(deleteGuest);
+                    _db.SaveChanges();
+                    myDataGrid.ItemsSource = _db.Guest.ToList();
+                    MessageBox.Show("Данные удалены.");
+
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show(ex.Message.ToString());
+                }
+
+            }
         }
         protected override void OnClosed(EventArgs e)
         {

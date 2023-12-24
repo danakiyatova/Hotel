@@ -141,6 +141,24 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Function Name="GetAdminSurname" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AdminId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetCategoryName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="RoomId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetGenderName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="GenderId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetGuestSurname" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="GuestId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetRoomName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="RoomId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetStatusName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="RoomId" Type="int" Mode="In" />
+  </Function>
   <EntityContainer Name="Хранилище HotelDBModelContainer">
     <EntitySet Name="Booking" EntityType="Self.Booking" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Gender" EntityType="Self.Gender" Schema="dbo" store:Type="Tables" />

@@ -12,6 +12,8 @@ namespace HotelManagment.Model.Database
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class HotelDBEntities : DbContext
     {
@@ -32,5 +34,59 @@ namespace HotelManagment.Model.Database
         public virtual DbSet<Room> Room { get; set; }
         public virtual DbSet<RoomCategory> RoomCategory { get; set; }
         public virtual DbSet<RoomStatus> RoomStatus { get; set; }
+    
+        public virtual ObjectResult<string> GetGenderName(Nullable<int> genderId)
+        {
+            var genderIdParameter = genderId.HasValue ?
+                new ObjectParameter("GenderId", genderId) :
+                new ObjectParameter("GenderId", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("GetGenderName", genderIdParameter);
+        }
+    
+        public virtual ObjectResult<string> GetAdminSurname(Nullable<int> adminId)
+        {
+            var adminIdParameter = adminId.HasValue ?
+                new ObjectParameter("AdminId", adminId) :
+                new ObjectParameter("AdminId", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("GetAdminSurname", adminIdParameter);
+        }
+    
+        public virtual ObjectResult<string> GetGuestSurname(Nullable<int> guestId)
+        {
+            var guestIdParameter = guestId.HasValue ?
+                new ObjectParameter("GuestId", guestId) :
+                new ObjectParameter("GuestId", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("GetGuestSurname", guestIdParameter);
+        }
+    
+        public virtual ObjectResult<string> GetRoomName(Nullable<int> roomId)
+        {
+            var roomIdParameter = roomId.HasValue ?
+                new ObjectParameter("RoomId", roomId) :
+                new ObjectParameter("RoomId", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("GetRoomName", roomIdParameter);
+        }
+    
+        public virtual ObjectResult<string> GetCategoryName(Nullable<int> roomId)
+        {
+            var roomIdParameter = roomId.HasValue ?
+                new ObjectParameter("RoomId", roomId) :
+                new ObjectParameter("RoomId", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("GetCategoryName", roomIdParameter);
+        }
+    
+        public virtual ObjectResult<string> GetStatusName(Nullable<int> roomId)
+        {
+            var roomIdParameter = roomId.HasValue ?
+                new ObjectParameter("RoomId", roomId) :
+                new ObjectParameter("RoomId", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("GetStatusName", roomIdParameter);
+        }
     }
 }

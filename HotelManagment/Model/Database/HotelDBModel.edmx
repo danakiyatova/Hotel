@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Хранилище HotelDBModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="Хранилище HotelDBModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Booking">
           <Key>
             <PropertyRef Name="BookingID" />
@@ -146,6 +146,24 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="GetAdminSurname" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="AdminId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="GetCategoryName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="RoomId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="GetGenderName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="GenderId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="GetGuestSurname" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="GuestId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="GetRoomName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="RoomId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="GetStatusName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="RoomId" Type="int" Mode="In" />
+        </Function>
         <EntityContainer Name="Хранилище HotelDBModelContainer">
           <EntitySet Name="Booking" EntityType="Self.Booking" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Gender" EntityType="Self.Gender" Schema="dbo" store:Type="Tables" />
@@ -179,8 +197,7 @@
             <End Role="Room" EntitySet="Room" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="HotelDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -369,6 +386,24 @@
             <End Role="RoomStatus" EntitySet="RoomStatus" />
             <End Role="Room" EntitySet="Room" />
           </AssociationSet>
+          <FunctionImport Name="GetGenderName" ReturnType="Collection(String)">
+          <Parameter Name="GenderId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="GetAdminSurname" ReturnType="Collection(String)">
+          <Parameter Name="AdminId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="GetGuestSurname" ReturnType="Collection(String)">
+          <Parameter Name="GuestId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="GetRoomName" ReturnType="Collection(String)">
+          <Parameter Name="RoomId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="GetCategoryName" ReturnType="Collection(String)">
+          <Parameter Name="RoomId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="GetStatusName" ReturnType="Collection(String)">
+          <Parameter Name="RoomId" Mode="In" Type="Int32" />
+          </FunctionImport>
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
@@ -452,6 +487,12 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="GetGenderName" FunctionName="Хранилище HotelDBModel.GetGenderName" />
+          <FunctionImportMapping FunctionImportName="GetAdminSurname" FunctionName="Хранилище HotelDBModel.GetAdminSurname" />
+          <FunctionImportMapping FunctionImportName="GetGuestSurname" FunctionName="Хранилище HotelDBModel.GetGuestSurname" />
+          <FunctionImportMapping FunctionImportName="GetRoomName" FunctionName="Хранилище HotelDBModel.GetRoomName" />
+          <FunctionImportMapping FunctionImportName="GetCategoryName" FunctionName="Хранилище HotelDBModel.GetCategoryName" />
+          <FunctionImportMapping FunctionImportName="GetStatusName" FunctionName="Хранилище HotelDBModel.GetStatusName" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

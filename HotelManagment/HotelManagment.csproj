@@ -94,6 +94,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>HotelDBModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Model\Database\ModifyBookingList.cs" />
+    <Compile Include="Model\Database\ModifyGuestsList.cs" />
+    <Compile Include="Model\Database\ModifyRoomList.cs" />
     <Compile Include="Model\Database\Room.cs">
       <DependentUpon>HotelDBModel.tt</DependentUpon>
     </Compile>
@@ -106,6 +109,7 @@
     <Compile Include="ViewModel\Appvm.cs" />
     <Compile Include="ViewModel\AuthorizationViewModel.cs" />
     <Compile Include="ViewModel\BaseViewModel.cs" />
+    <Compile Include="ViewModel\UpdateBookingWindowViewModel.cs" />
     <Compile Include="View\Windows\BookingWindow.xaml.cs">
       <DependentUpon>BookingWindow.xaml</DependentUpon>
     </Compile>

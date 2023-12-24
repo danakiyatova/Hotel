@@ -21,6 +21,7 @@ namespace HotelManagment.View.Windows
     public partial class InsertGuestWindow : Window
     {
         HotelDBEntities _db = new HotelDBEntities();
+        List<ModifyGuestsList> modifyGuestsLists = new List<ModifyGuestsList>();
         public InsertGuestWindow()
         {
             InitializeComponent();
@@ -43,7 +44,8 @@ namespace HotelManagment.View.Windows
 
             _db.Guest.Add(newGuest);
             _db.SaveChanges();
-            RoomsWindow.datagrid.ItemsSource = _db.Guest.ToList();
+
+            RoomsWindow.datagrid.ItemsSource = modifyGuestsLists.ToList();
             this.Hide();
         }
     }

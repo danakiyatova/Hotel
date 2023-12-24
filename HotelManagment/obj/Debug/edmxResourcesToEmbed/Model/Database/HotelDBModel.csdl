@@ -185,5 +185,23 @@
       <End Role="RoomStatus" EntitySet="RoomStatus" />
       <End Role="Room" EntitySet="Room" />
     </AssociationSet>
+    <FunctionImport Name="GetGenderName" ReturnType="Collection(String)">
+      <Parameter Name="GenderId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetAdminSurname" ReturnType="Collection(String)">
+      <Parameter Name="AdminId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetGuestSurname" ReturnType="Collection(String)">
+      <Parameter Name="GuestId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetRoomName" ReturnType="Collection(String)">
+      <Parameter Name="RoomId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetCategoryName" ReturnType="Collection(String)">
+      <Parameter Name="RoomId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetStatusName" ReturnType="Collection(String)">
+      <Parameter Name="RoomId" Mode="In" Type="Int32" />
+    </FunctionImport>
   </EntityContainer>
 </Schema>

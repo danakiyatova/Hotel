@@ -6,13 +6,13 @@
         xmlns:local="clr-namespace:HotelManagment.View.Windows"
         mc:Ignorable="d"
          WindowStartupLocation="CenterScreen"
-       Title="Добавление данных" Height="500" Width="400"  ResizeMode="NoResize"  >
+       Title="Добавление данных о категории" Height="500" Width="400"  ResizeMode="NoResize"  >
   
     
     <Grid>
         <StackPanel>
             <Label  Content="Новая категория" HorizontalAlignment="Center" FontSize="40" FontFamily="Comic Sans MS"/>
-            <TextBlock Margin="10,100,0,0"  Text="Наименование категории" FontSize="17" FontFamily="Comic Sans MS"/>
+            <TextBlock Margin="10,100,0,0"  Text="Введите наименование категории" FontSize="17" FontFamily="Comic Sans MS"/>
             <TextBox Margin="0,0,0,50" Name="InsertRoomCategory" Height="30" FontFamily="Comic Sans MS"/>
             
 

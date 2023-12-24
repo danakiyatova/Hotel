@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:HotelManagment.View.Windows"
         mc:Ignorable="d"
          WindowStartupLocation="CenterScreen"
-        Title="Добавление данных" Height="500" Width="400"  ResizeMode="NoResize">
+        Title="Добавление данных о номере" Height="500" Width="400"  ResizeMode="NoResize">
     <Grid>
         <StackPanel>
             <Label  Content="Новый номер" HorizontalAlignment="Center" FontSize="40" FontFamily="Comic Sans MS"/>

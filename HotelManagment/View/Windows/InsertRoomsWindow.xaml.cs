@@ -28,22 +28,33 @@ namespace HotelManagment.View.Windows
 
         private void BtnAddProduct_Click(object sender, RoutedEventArgs e)
         {
-            Room newRoom = new Room()
+            try
             {
-                
-                RoomName = InsertRoomName.Text,
-                RoomNumber = Convert.ToInt32(InsertRoomNumber.Text),
-                Seats = Convert.ToInt32(InsertRoomNumber.Text),
-                Cost = Convert.ToInt32(InsertCost.Text),
-                RoomStatusID = Convert.ToInt32(InsertRoomStatusID.Text),
-                RoomCategoryID = Convert.ToInt32(InsertRoomCategoryID.Text)
+                Room newRoom = new Room()
+                {
 
-            };
+                    RoomName = InsertRoomName.Text,
+                    RoomNumber = Convert.ToInt32(InsertRoomNumber.Text),
+                    Seats = Convert.ToInt32(InsertRoomNumber.Text),
+                    Cost = Convert.ToInt32(InsertCost.Text),
+                    RoomStatusID = Convert.ToInt32(InsertRoomStatusID.Text),
+                    RoomCategoryID = Convert.ToInt32(InsertRoomCategoryID.Text)
+                };
 
-            _db.Room.Add(newRoom);
-            _db.SaveChanges();
-            RoomsWindow.datagrid.ItemsSource = _db.Room.ToList();
-            this.Hide();
+
+
+
+                _db.Room.Add(newRoom);
+                _db.SaveChanges();
+                RoomsWindow.datagrid.ItemsSource = _db.Room.ToList();
+                this.Hide();
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Неверный формат данных", MessageBoxButton.OK, MessageBoxImage.Stop);
+
+            }
         }
     }
 }

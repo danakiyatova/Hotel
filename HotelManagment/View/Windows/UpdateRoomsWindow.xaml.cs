@@ -30,6 +30,7 @@ namespace HotelManagment.View.Windows
 
         private void BtnUpddateProduct_Click(object sender, RoutedEventArgs e)
         {
+            
             Room updateMember = (from m in _db.Room
                                    where m.RoomID == Id
                                    select m).Single();

@@ -6,10 +6,10 @@
         xmlns:local="clr-namespace:HotelManagment.View.Windows"
         mc:Ignorable="d"
          WindowStartupLocation="CenterScreen"
-       Title="Изменение данных" Height="550" Width="400"  ResizeMode="NoResize">
+       Title="Изменение данных о госте" Height="550" Width="400"  ResizeMode="NoResize">
     <Grid>
         <StackPanel>
-            <Label  Content="Новый гость" HorizontalAlignment="Center" FontSize="40" FontFamily="Comic Sans MS"/>
+            <Label  Content="Изменить данные о госте" HorizontalAlignment="Center" FontSize="31" FontFamily="Comic Sans MS"/>
             <TextBlock Margin="10,0,0,0" Text="Фамилия" FontSize="15" FontFamily="Comic Sans MS"/>
             <TextBox Name="InsertSurname" Height="30" FontFamily="Comic Sans MS"/>
             <TextBlock Margin="10,0,0,0" Text="Имя" FontSize="15" FontFamily="Comic Sans MS"/>
@@ -22,9 +22,11 @@
             <TextBox Name="InsertPSeries" Height="30" FontFamily="Comic Sans MS"/>
             <TextBlock Margin="10,0,0,0" Text="Номер паспорта" FontSize="15" FontFamily="Comic Sans MS"/>
             <TextBox Name="InsertPNumber" Height="30" FontFamily="Comic Sans MS"/>
-            <TextBlock Margin="10,0,0,0" Text="Гендер(id)" FontSize="15" FontFamily="Comic Sans MS"/>
-            <TextBox Name="GuestGenderID" Height="30" FontFamily="Comic Sans MS"/>
-
+            <TextBlock Margin="10,0,0,0" Text="Гендер (id)" FontSize="15" FontFamily="Comic Sans MS"/>
+            <ComboBox x:Name="GenderCB" Width="150" Height="30" FontFamily="Comic Sans MS" FontSize="16" Margin="10,0,0,0" Text="Мужской" HorizontalAlignment="Left">
+                <ComboBoxItem Content="Мужской"/>
+                <ComboBoxItem Content="Женский"/>
+            </ComboBox>
             <Button Name="BtnUpdateGuest" Content="Обновить" FontSize="20" Height="40" Width="150" Margin="0,10,0,0" Background="Bisque"  FontFamily="Comic Sans MS" Click="BtnUpdateGuest_Click" />
         </StackPanel>
     </Grid>

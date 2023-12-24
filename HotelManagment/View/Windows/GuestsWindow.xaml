@@ -8,13 +8,12 @@
         ResizeMode="CanMinimize"
        WindowStartupLocation="CenterScreen"
         Title="Гости" MinHeight="500" MinWidth="800"
-        Width="900" Height="500">
+        Width="900" Height="500" x:Name="window">
 
 
     <Grid  Background="#FFE7AEFF">
 
         <DataGrid x:Name="myDataGrid" x:FieldModifier="public"
-            ItemsSource="{Binding Guest}"
             IsReadOnly = "true"
             SelectionChanged="DataGrid_SelectionChanged"
             AutoGenerateColumns="False" Visibility="Visible" 
@@ -29,7 +28,7 @@
                 <DataGridTextColumn Header="Номер телефона" Binding="{Binding PhoneNumber}"/>
                 <DataGridTextColumn Header="Серия паспорта" Binding="{Binding PassportSeries}"/>
                 <DataGridTextColumn Header="Номер паспорта" Binding="{Binding PassportNumber}"/>
-                <DataGridTextColumn Header="Гендер(id)" Binding="{Binding GenderID}"/>
+                <DataGridTextColumn Header="Гендер(id)" Binding="{Binding GenderName}"/>
                 <DataGridTemplateColumn>
                     <DataGridTemplateColumn.HeaderTemplate>
                         <DataTemplate>
@@ -52,8 +51,7 @@
 
         </DataGrid>
 
-        <Button x:Name="BtnBack3" Content="Назад" HorizontalAlignment="Left" Margin="644,364,0,0" 
-                VerticalAlignment="Top" Width="121" Click="BtnBack3_Click" Foreground="#FF05006D" Background="Bisque" FontFamily="Tahoma" FontSize="20"/>
-
+        <Button x:Name="BtnBack3" Content="Назад" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,70,70" 
+                Width="121" Click="BtnBack3_Click" Foreground="#FF05006D" Background="Bisque" FontFamily="Tahoma" FontSize="20"/>
     </Grid>
 </Window>

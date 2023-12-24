@@ -32,7 +32,5 @@ namespace HotelManagment.Model.Database
         public virtual ICollection<Booking> Booking { get; set; }
         public virtual RoomCategory RoomCategory { get; set; }
         public virtual RoomStatus RoomStatus { get; set; }
-
-      
     }
 }

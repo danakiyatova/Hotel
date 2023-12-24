@@ -27,8 +27,8 @@
                 <DataGridTextColumn Header="Номер комнаты"  Binding="{Binding RoomNumber}"/>
                 <DataGridTextColumn Header="Количество мест" Binding="{Binding Seats}"/>
                 <DataGridTextColumn Header="Цена за сутки" Binding="{Binding Cost}"/>
-                <DataGridTextColumn Header="Статус" Binding="{Binding RoomStatusID}"/>
-                <DataGridTextColumn Header="Категория" Binding="{Binding RoomCategoryID}"/>
+                <DataGridTextColumn Header="Статус" Binding="{Binding StatusName}"/>
+                <DataGridTextColumn Header="Категория" Binding="{Binding CategoryName}"/>
                 <DataGridTemplateColumn>
                     <DataGridTemplateColumn.HeaderTemplate>
                         <DataTemplate>
